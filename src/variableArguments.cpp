@@ -17,5 +17,16 @@ NOTES: 		use stdarg.h header.
 
 int variableArguments(int arg_count, ...)
 {
-	return 0;
+	int i, n, count = 0;
+	va_list ls;//creating va_list variable in function defnition
+	va_start(ls, arg_count);//va_start-->to initialize va_list to an argument list(no of parameters,parameters)
+	for (i = 0; i<arg_count; i++)
+	{
+		n = va_arg(ls, int);//retrieving each value into n from list
+		if (n>90)
+			count++;
+	}
+	va_end(ls);//to clean memory assigned to va_list
+	return count;
+
 }
