@@ -30,12 +30,12 @@ int isOlder(char *dob1, char *dob2) {
 			if ((y1 == y2) && (m1 == m2) && (d1 == d2))
 				return 0;
 			else
-			if ((y1<y2) || ((y1 == y2) && (m1>m2)) || ((y1 == y2) && (m1 == m2) && (d1>d2)))
+			if ((y1<y2) || ((y1 == y2) && (m1<m2)) || ((y1 == y2) && (m1 == m2) && (d1<d2)))
 			{
 				return 1;
 			}
 			else
-			if ((y2<y1) || ((y1 == y2) && (m2>m1)) || ((y1 == y2) && (m1 == m2) && (d2>d1)))
+			if ((y2<y1) || ((y1 == y2) && (m2<m1)) || ((y1 == y2) && (m1 == m2) && (d2<d1)))
 				return 2;
 
 
